@@ -1,0 +1,33 @@
+{
+	"ImportPath": "github.com/anoopengineer/tldr",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.8.7-53-g446d1c1",
+			"Rev": "446d1c146faa8ed3f4218f056fcd165f6bcfda81"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-187-gc31a797",
+			"Rev": "c31a7975863e7810c92e2e288a9ab074f9a88f29"
+		},
+		{
+			"ImportPath": "github.com/gizak/termui",
+			"Rev": "551f2e7b8415377bac28e3001882b94fc625aff2"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-runewidth",
+			"Comment": "travisish-38-gd96d1bd",
+			"Rev": "d96d1bd051f2bd9e7e43d602782b37b93b1b5666"
+		},
+		{
+			"ImportPath": "github.com/nsf/termbox-go",
+			"Rev": "9554a56625563e80bffd06e41fb525b363b01943"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "833a04a10549a95dc34458c195cbad61bbb6cb4d"
+		}
+	]
+}
