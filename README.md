@@ -2,34 +2,31 @@
 
 # How to build
 
-Enable vendor experiment in Go:
+```
+make build
+```
 
-```export GO15VENDOREXPERIMENT=1```
+# How to create a release
 
-To build:
+```
+make dist
+```
 
-```go build```
-
-# Adding Dependencies
+# Saving new dependencies
 
 First get the godep package
 
-```go get github.com/tools/godep```
+```
+make godep-save
+```
 
-Use go get as usual to get the dependency. And then from the root project folder, run:
-
-```export GO15VENDOREXPERIMENT=1```
-
-And
-
-```godep save```
 
 # TODO
+- Better readme
 - Auto detection of platform
 - Check in common if platform command not found
-- Check /usr/share/ location by default and switch back to ~/.tldr if not found
 - RPM, DEB packages
 - Windows support
 
 - better error handling
-- Proxy support
+- Proxy support??
