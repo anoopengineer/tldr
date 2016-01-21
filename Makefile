@@ -5,7 +5,7 @@ build:clean
 	@GO15VENDOREXPERIMENT=1  goxc -q
 	@echo "Build complete"
 
-dist:
+dist:clean
 	@echo "About to get goxc"
 	@go get github.com/anoopengineer/goxc
 	@echo "Bumping version"

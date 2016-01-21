@@ -1,6 +1,9 @@
 {
 	"ImportPath": "github.com/anoopengineer/tldr",
 	"GoVersion": "go1.5",
+	"Packages": [
+		"./..."
+	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/Sirupsen/logrus",
@@ -26,8 +29,22 @@
 			"Rev": "9554a56625563e80bffd06e41fb525b363b01943"
 		},
 		{
+			"ImportPath": "golang.org/x/net/websocket",
+			"Rev": "b2ed34f6fc8d65cc6a090fb87692ea6b1162fddd"
+		},
+		{
 			"ImportPath": "golang.org/x/sys/unix",
 			"Rev": "833a04a10549a95dc34458c195cbad61bbb6cb4d"
+		},
+		{
+			"ImportPath": "gopkg.in/airbrake/gobrake.v2",
+			"Comment": "v2.0.3",
+			"Rev": "c9d51adc624b5cc4c1bf8de730a09af4878ffe2d"
+		},
+		{
+			"ImportPath": "gopkg.in/gemnasium/logrus-airbrake-hook.v2",
+			"Comment": "v2.0.0",
+			"Rev": "31e6fd4bd5a98d8ee7673d24bc54ec73c31810dd"
 		}
 	]
 }
