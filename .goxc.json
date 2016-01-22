@@ -6,6 +6,6 @@
 		"deb-dev"
 	],
 	"BuildConstraints": "linux,amd64 windows,amd64 darwin,amd64",
-	"PackageVersion": "0.1.1",
+	"PackageVersion": "0.1.2",
 	"ConfigVersion": "0.9"
 }
