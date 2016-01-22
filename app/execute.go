@@ -24,8 +24,8 @@ func Execute(c *cli.Context) {
 		return
 	}
 
-	if config.UpdateCache || !LocalCacheAvailable() {
-		if err := UpdateCache(config); err != nil {
+	if config.UpdateCache || !localCacheAvailable() || localCacheExpired() {
+		if err := updateCache(config); err != nil {
 			log.Fatal(err)
 		}
 	}
