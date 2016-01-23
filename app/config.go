@@ -4,6 +4,7 @@ import "github.com/codegangsta/cli"
 
 type Config struct {
 	SourceURL      string
+	Platform       string
 	Debug          bool
 	NoRender       bool
 	RenderOnTermUI bool
@@ -16,6 +17,6 @@ func populateConfig(c *cli.Context) (config Config) {
 	config.NoRender = c.Bool("no-render")
 	config.RenderOnTermUI = c.Bool("termui")
 	config.UpdateCache = c.Bool("update-cache")
-
+	config.Platform = c.String("platform")
 	return config
 }

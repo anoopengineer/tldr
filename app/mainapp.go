@@ -38,6 +38,11 @@ func MainApp(version string) *cli.App {
 			Usage: "Source URL pointing to the zip file",
 			// EnvVar: "LEGACY_COMPAT_LANG,APP_LANG,LANG",
 		},
+		cli.StringFlag{
+			Name:  "platform, p",
+			Usage: "Possible values are 'linux', 'osx', 'sunos' and 'common'",
+			// EnvVar: "LEGACY_COMPAT_LANG,APP_LANG,LANG",
+		},
 	}
 	tldr.Action = Execute
 	tldr.HideHelp = true

@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/user"
 	"path/filepath"
+	"runtime"
 	"time"
 
 	"github.com/Sirupsen/logrus"
@@ -161,18 +162,53 @@ func updateCacheMetaData(cache Cache) error {
 }
 
 func getPageLocation(command, platform string) (string, error) {
-	path, err := getCurrentCacheLocation()
+	currentCacheLocation, err := getCurrentCacheLocation()
 	if err != nil {
 		return "", err
 	}
-	path = filepath.Join(path, "tldr-master", "pages", platform, command+".md")
-	if _, err := os.Stat(path); err == nil {
+	//if platform is given, use that. If file doesn't exists return error
+	// if platform is not given, try to guess the platform. if file not found, try with common.
+	if platform != "" {
+		path := filepath.Join(currentCacheLocation, "tldr-master", "pages", platform, command+".md")
+		if _, err := os.Stat(path); err != nil {
+			return "", COMMAND_NOT_FOUND
+		}
 		LOG.WithFields(logrus.Fields{
 			"path": path,
 		}).Debug("Page available")
 		return path, nil
+	} else {
+		platform = currentPlatform()
+		path := filepath.Join(currentCacheLocation, "tldr-master", "pages", platform, command+".md")
+		if _, err := os.Stat(path); err == nil {
+			LOG.WithFields(logrus.Fields{
+				"path":     path,
+				"platform": platform,
+			}).Debug("Page available")
+			return path, nil
+		}
+		platform = "common"
+		path = filepath.Join(currentCacheLocation, "tldr-master", "pages", platform, command+".md")
+		if _, err := os.Stat(path); err == nil {
+			LOG.WithFields(logrus.Fields{
+				"path":     path,
+				"platform": platform,
+			}).Debug("Page available in common directory")
+			return path, nil
+		}
+		return "", COMMAND_NOT_FOUND
+
 	}
-	return "", COMMAND_NOT_FOUND
+}
+
+func currentPlatform() string {
+	switch runtime.GOOS {
+	case "darwin":
+		return "osx"
+	default:
+		return runtime.GOOS
+	}
+
 }
 
 func unzip(src, dest string) error {

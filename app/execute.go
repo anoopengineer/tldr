@@ -32,7 +32,15 @@ func Execute(c *cli.Context) {
 	LOG.WithFields(logrus.Fields{
 		"command": command,
 	}).Debug("Printing command")
-	path, err := getPageLocation(command, "common")
+	path, err := getPageLocation(command, config.Platform)
+
+	if err == COMMAND_NOT_FOUND {
+		fmt.Printf("TLDR for command %s was not found.\nYou can get your TLDRs added by sending a pull request to https://github.com/tldr-pages/tldr\n", command)
+		os.Exit(-1)
+	}
+	if err != nil {
+		LOG.Fatal(err)
+	}
 	LOG.WithFields(logrus.Fields{
 		"path": path,
 	}).Debug("Printing path")
