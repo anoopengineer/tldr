@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/anoopengineer/tldr.svg?branch=master)](https://travis-ci.org/anoopengineer/tldr)
 
+# tldr client implemented in golang #
+Native binary client that works in Linux, Mac OSX and Windows.
+
+![Screenshot of TLDR](screenshots/tldr-screenshot.png)
+
+# Installing #
+Native binaries are available for Linux, Mac OSX and Windows in the [Release tab](https://github.com/anoopengineer/tldr/releases).
 
 # How to build
 
