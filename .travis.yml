@@ -1,5 +1,10 @@
 language: go
 sudo: false
+
+env:
+  global:
+  - GO15VENDOREXPERIMENT='1'
+
 go:
  - 1.5.3
  - master
@@ -8,6 +13,9 @@ os:
  - linux
  - osx
  - windows
+
+install:
+ - make build
 
 script:
  - go test -v ./...
