@@ -1,0 +1,13 @@
+language: go
+sudo: false
+go:
+ - 1.5.3
+ - master
+ - tip
+os:
+ - linux
+ - osx
+ - windows
+
+script:
+ - go test -v ./...
