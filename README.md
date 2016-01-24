@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/anoopengineer/tldr.svg?branch=master)](https://travis-ci.org/anoopengineer/tldr)
 
 
 # How to build
