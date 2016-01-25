@@ -19,7 +19,7 @@ func Execute(c *cli.Context) {
 	}).Debug("Printing config")
 	command, err := getCommand()
 	if err != nil {
-		fmt.Errorf("Command name is missing in the input")
+		fmt.Println("\nCommand name is missing in the input\n")
 		cli.ShowAppHelp(c)
 		return
 	}

@@ -6,7 +6,7 @@ TLDR is Simplified and community driven man page. This project provides a native
 ![Screenshot of TLDR](screenshots/tldr-screenshot.png)
 
 # Installing #
-Native binaries are available for Linux, Mac OSX and Windows in the [Release tab](https://github.com/anoopengineer/tldr/releases).
+Native binaries are available for Linux, Mac OSX and Windows in the [Release page](https://github.com/anoopengineer/tldr/releases).
 
 Unzip the downloaded files and copy them to a location present in your `$PATH` (e.g `/usr/local/bin` for linux and `c:\Windows` in windows)
 
