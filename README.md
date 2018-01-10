@@ -16,3 +16,5 @@ Pull requests are welcome!
 
 1. Deb and RPM repositories
 1. brew support for Mac platform
+
+test
