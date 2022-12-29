@@ -34,7 +34,7 @@ func MainApp(version string) *cli.App {
 		},
 		cli.StringFlag{
 			Name:  "source, s",
-			Value: "https://github.com/tldr-pages/tldr/archive/master.zip",
+			Value: "https://github.com/tldr-pages/tldr/archive/main.zip",
 			Usage: "Source URL pointing to the zip file",
 			// EnvVar: "LEGACY_COMPAT_LANG,APP_LANG,LANG",
 		},
